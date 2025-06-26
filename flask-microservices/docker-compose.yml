@@ -5,6 +5,8 @@ services:
     build: ./backend
     ports:
       - "5001:5001"
+    environment:
+      - SECRET_TOKEN=supersecrettoken
 
   frontend:
     build: ./frontend
@@ -12,3 +14,5 @@ services:
       - "5000:5000"
     depends_on:
       - backend
+    environment:
+      - SECRET_TOKEN=supersecrettoken

@@ -1,9 +1,10 @@
 from flask import Flask, render_template_string
 import requests
+import os
 
 app = Flask(__name__)
 
-SECRET_TOKEN = "supersecrettoken"
+SECRET_TOKEN = os.environ.get("SECRET_TOKEN", "")
 
 @app.route('/')
 def index():
