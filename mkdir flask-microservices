@@ -1,4 +1,0 @@
-mkdir flask-microservices
-cd flask-microservices
-mkdir backend frontend
-
